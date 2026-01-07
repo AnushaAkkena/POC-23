@@ -3,7 +3,7 @@ pipeline {
   agent { label 'docker' } // or any agent with Maven, Docker, AWS CLI
 
   environment {
-    AWS_REGION        = 'ap-south-1'           // Bengaluru region example; change as needed
+    AWS_REGION        = 'ap-south-1'           
     AWS_ACCOUNT_ID    = '123456789012'         // your account id
     ECR_REPO_NAME     = 'cicd-demo'
     IMAGE_NAME        = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}"
